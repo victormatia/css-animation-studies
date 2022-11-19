@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  background-color: rgb(239, 239, 239);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  padding: 10px;
+  z-index: 1;
+  width: 300px;
+}
+
+.nav {
+  color: rgb(239, 239, 239);
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.nav li {
+  opacity: 0.8;
+}
+
+.nav li:hover {
+  color: rgb(213, 60, 116);
+  opacity: 1;
+}
+
+.background-animated {
+  width: 700px;
+  height: 500px;
+  background-color: rgb(21, 21, 21);
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 2s;
+}
+
+.background-animated:hover {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0;
+}
+
+.circle, .circle-chil, .circle-chil-chil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-1 {
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  background-color: rgba(134, 134, 134, 0.546);
+  animation: fade-in-down 10s infinite;
+  transition: 1s;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.circle-4 {
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  background-color: rgba(134, 134, 134, 0.546);
+  animation: fade-in-down 10s infinite;
+  animation-delay: 1s;
+  transition: 3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.circle-2 {
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  background-color: rgba(134, 134, 134, 0.546);
+  animation: fade-in-up 10s infinite;
+  transition: 1s;
+  animation-delay: 1s;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.circle-3 {
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  background-color: rgba(134, 134, 134, 0.546);
+  animation: fade-in-up 10s infinite;
+  transition: 1s;
+  animation-delay: 3s;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@keyframes fade-in-down {
+  0% { opacity: 0; top: 0; }
+  50% { opacity: 1; top: 40%;}
+  100% { opacity: 0; top: 0;}
+}
+
+@keyframes fade-in-up {
+  0% { opacity: 0; bottom: 0; }
+  50% { opacity: 1; bottom: 40%;}
+  100% { opacity: 0; bottom: 0;}
+}
+
+.mask {
+  background-color: rgba(0, 0, 0, 0.773);
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+  position: absolute;
+}
+
+h1 {
+  color: white;
+  z-index: 1;
+}
